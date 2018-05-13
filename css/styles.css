@@ -35,6 +35,9 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+.hidden {
+  display: none;
+}
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
