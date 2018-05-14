@@ -1,6 +1,9 @@
 let restaurants,
   neighborhoods,
   cuisines;
+/**
+ * Global window variables
+ */
 var map,
   markers = [];
 
