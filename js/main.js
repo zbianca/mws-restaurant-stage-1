@@ -137,7 +137,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
 
-  cardHtml = `<a href="${DBHelper.urlForRestaurant(restaurant)}">
+  liHtml = `<a href="${DBHelper.urlForRestaurant(restaurant)}">
               <img class="restaurant-img" src="${DBHelper.imageUrlForRestaurant(restaurant)}" alt="${restaurant.photo_description}">
               <h1>${restaurant.name}</h1>
               <p>${restaurant.neighborhood}</p>
@@ -145,7 +145,7 @@ createRestaurantHTML = (restaurant) => {
               <a class="restaurants-list-cta" href="${DBHelper.urlForRestaurant(restaurant)}">View Details</a></a>`
 
   const li = document.createElement('li');
-  li.innerHTML = cardHtml;
+  li.innerHTML = liHtml;
 
   return li
 }
