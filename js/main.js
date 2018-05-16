@@ -8,6 +8,19 @@ var map,
   markers = [];
 
 /**
+ * Register service worker.
+ */
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('./sw.js', {scope: './'})
+    .then(function(registration) {
+      console.log('[serviceWorker] Registration worked!');
+    })
+    .catch(function(err) {
+      console.log('[serviceWorker] Registration failed!', err);
+    });
+}
+
+/**
  *  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
